@@ -1,0 +1,27 @@
+﻿@model IEnumerable<MovieCustomerMVAAppWithAuthentication.Models.Movie>
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Movie List</h2>
+
+<table class="table table-bordered table-condensed table-striped">
+    <thead>
+        <tr>
+            <th>Movie Name</th>
+            <th>Genre</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>@item.Name</td>
+                <td>@item.Genre</td>
+            </tr>
+        }
+    </tbody>
+
+</table>
+
